@@ -20,6 +20,17 @@ public class ContenidoRest {
     }
 
 
+    @GetMapping("")
+    public List<Contenido> listarTodoContenido() {
+        return contenidoService.listarTodoContenido();
+    }
+
+
+    @GetMapping("/{id}")
+    public Contenido getContenidoById(@PathVariable int id) {
+        return contenidoService.findById(id);
+    }
+
     @GetMapping("/random-movie")
     public Contenido getRandomMovie() {
         return contenidoService.getRandomMovie();
@@ -38,9 +49,9 @@ public class ContenidoRest {
         return contenidorepository.findByGeneroId(idGenero);
     }
 
-    @GetMapping("")
-    public List<Contenido> listarTodoContenido() {
-        return contenidoService.listarTodoContenido();
+    @PostMapping("/puntuar")
+    public Contenido puntuarContenido(@RequestBody Contenido contenido) {
+        return contenidoService.saveContenido(contenido);
     }
 
 

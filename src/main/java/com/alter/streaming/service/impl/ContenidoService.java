@@ -30,4 +30,13 @@ public class ContenidoService {
         return contenidoRepository.findAll();
     }
 
+    public Contenido saveContenido(Contenido contenido) {
+        return contenidoRepository.save(contenido);
+    }
+
+    public Contenido findById(int id) {
+        return contenidoRepository.findById(id);
+    }
+
+
 }

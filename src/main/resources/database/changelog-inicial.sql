@@ -21,7 +21,7 @@ CREATE TABLE contenido(
     tipo VARCHAR(50) NOT NULL,
         id_genero int NOT NULL,
     		FOREIGN KEY(id_genero) REFERENCES genero(id),
-    		puntuaciones INT NOT NULL,
+    		puntuaciones INT ,
     		visualizaciones INT NOT NULL
 );
 
@@ -37,12 +37,15 @@ CREATE TABLE usuario(
 
 -- changeset andres:5
 -- comment: Registro de peliculas y series
-INSERT INTO contenido(nombre, tipo,id_genero, puntuaciones, visualizaciones) VALUES
-("Spiderman","Pelicula","3", "4", "0"),("Revancha","Pelicula","3", "4", "0"),
-("Breaking bad","Serie","3", "4", "0"),("Juego de Tronos","serie","2", "4", "0"),
-("¿que paso ayer?","Pelicula","1", "4", "0"),("El conjuro","Pelicula","3", "4", "0"),
-("Los simpson","serie","1", "4", "0"),("Titanic","Pelicula","3", "4", "0")
-
+INSERT INTO contenido(nombre, tipo, id_genero, puntuaciones, visualizaciones) VALUES
+("Spiderman", "Pelicula", 3, 1, 0),
+("Revancha", "Pelicula", 3, 1, 0),
+("Breaking bad", "Serie", 3, 1, 0),
+("Juego de Tronos", "Serie", 2, 1, 0),
+("¿Qué pasó ayer?", "Pelicula", 1, 1, 0),
+("El conjuro", "Pelicula", 3, 1, 0),
+("Los simpson", "Serie", 1, 1, 0),
+("Titanic", "Pelicula", 3, 1, 0);
 
 
 
